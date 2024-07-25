@@ -1,0 +1,25 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "bootstrap": "npm install",
+    "clean": "npm run clean -w lib-demo-app && npm run clean -w @demotmg/simple-js && npm run clean -w @demotmg/simple-ts && npm run clean -w @demotmg/combination && npm run clean -w @demotmg/multy-source && rimraf ./node_modules",
+    "refresh": "npm run clean && npm run bootstrap",
+    "dev:app": "npm run dev -w lib-demo-app",
+    "build:simple-js": "npm run build -w @demotmg/simple-js",
+    "build:simple-ts": "npm run build -w @demotmg/simple-ts",
+    "build:combination": "npm run build -w @demotmg/combination",
+    "build:multy-source": "npm run build -w @demotmg/multy-source",
+    "build:all": "npm run build:simple-js && npm run build:simple-ts && npm run build:combination"
+  },
+  "workspaces": [
+    "./packages/*",
+    "./apps/*"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^5.0.1"
+  }
+}
