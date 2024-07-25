@@ -1,0 +1,24 @@
+{
+  "name": "@demotmg/simple-js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/simple-js.umd.cjs",
+  "module": "./dist/simple-js.js",
+  "exports": {
+    ".": {
+      "import": "./dist/simple-js.js",
+      "require": "./dist/simple-js.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "clean": "rimraf ./node_modules",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.3.4"
+  }
+}
